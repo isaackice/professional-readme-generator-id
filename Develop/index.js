@@ -4,7 +4,21 @@ const { writeFile } = require("fs")
 const generateMarkdown = require("./utils/generateMarkdown")
 
 // TODO: Create an array of questions for user input
-const questions =[ {
+const questions =[ 
+{
+    type: 'input',
+    message: 'What is your GitHub username?',
+    name: 'username',
+},
+
+{
+
+    type: 'input',
+    message: 'What is your email?',
+    name: 'email',
+},   
+    
+{
     type: "input",
     message: "What is the title of your application?",
     name: "title",
@@ -28,13 +42,13 @@ const questions =[ {
 
 {
     type: "input",
-    message: "How does a user use your application? Also provide a link so the user can access the application with ease.",
+    message: "How does a user use your application?",
     name: "usage",
 },
 
 {
     type: "input",
-    message: "Did you use any sorces (websites or people)?",
+    message: "Did you use any sources (websites or people)?",
     name: "credits",
 },
 
